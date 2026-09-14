@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVerse - Movies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"><i class="fa-solid fa-film"></i> CineVerse</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#trending">Trending</a>
+            <a href="index.html#genres">Genres</a>
+            <a href="movies.html" class="active">Movies</a>
+        </nav>
+        <div class="nav-search">
+            <input type="text" id="searchInput" placeholder="Search movies...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <section class="page-header">
+        <div>
+            <span class="section-label">DISCOVER</span>
+            <h1>Explore Movies</h1>
+            <p>
+                Browse popular movies, discover new stories,
+                and find your next favorite film.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="filter-section">
+        <div class="genre-filters">
+            <button class="filter-btn active" data-filter="All">All</button>
+            <button class="filter-btn" data-filter="Action"><i class="fa-solid fa-bolt"></i>Action</button>
+            <button class="filter-btn" data-filter="Comedy"><i class="fa-solid fa-face-laugh"></i>Comedy</button>
+            <button class="filter-btn" data-filter="Horror"><i class="fa-solid fa-ghost"></i>Horror</button>
+            <button class="filter-btn" data-filter="Sci-Fi"><i class="fa-solid fa-rocket"></i>Sci-Fi</button>
+            <button class="filter-btn" data-filter="Drama"><i class="fa-solid fa-masks-theater"></i>Drama</button>
+            <button class="filter-btn" data-filter="Romance"><i class="fa-solid fa-heart"></i>Romance</button>
+        </div>
+    </section>
+
+    <section class="movies-section movies-page">
+        <div class="section-title">
+            <div><span class="section-label">MOVIE COLLECTION</span><h2>All Movies</h2></div>
+            <span id="movieCount"></span>
+        </div>
+
+        <div class="movie-grid" id="movieGrid">
+            <div class="movie-card" data-title="Inception" data-genre="Sci-Fi">
+                <div class="movie-poster">
+                    <img src="images/inception.jpeg" alt="Inception">
+                    <span class="movie-rating"><i class="fa-solid fa-star"></i>8.8</span>
+                    <div class="poster-overlay">
+                        <a href="movie-details.html" class="play-btn"><i class="fa-solid fa-play"></i></a>
+
+                    </div>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Inception</h3>
+                    <div class="movie-meta"><span>2010</span><span>Sci-Fi</span></div>
+                    <p>
+                        A skilled thief enters people's dreams
+                        to steal valuable secrets.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="The Dark Knight" data-genre="Action">
+                <div class="movie-poster">
+                    <img src="images/dark-knight.jpeg" alt="The Dark Knight">
+                    <span class="movie-rating"><i class="fa-solid fa-star"></i>9.0</span>
+                    <div class="poster-overlay">
+                        <a href="movie-details.html" class="play-btn"><i class="fa-solid fa-play"></i></a>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <h3>The Dark Knight</h3>
+                    <div class="movie-meta"><span>2008</span><span>Action</span></div>
+                    <p>
+                        Batman faces a criminal mastermind
+                        who plunges Gotham into chaos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="Avengers Endgame" data-genre="Action">
+                <div class="movie-poster">
+                    <img src="images/endgame.jpeg" alt="Avengers Endgame">
+                    <span class="movie-rating"><i class="fa-solid fa-star"></i>8.4</span>
+                    <div class="poster-overlay">
+                        <a href="movie-details.html" class="play-btn"><i class="fa-solid fa-play"></i></a>
+                    </div>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Avengers: Endgame</h3>
+                    <div class="movie-meta"><span>2019</span><span>Action</span></div>
+                    <p>
+                        The Avengers assemble once again to
+                        reverse the devastating events caused by Thanos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="The Conjuring" data-genre="Horror">
+                <div class="movie-poster">
+                    <img src="images/conjuring.jpeg" alt="The Conjuring">
+                    <span class="movie-rating"><i class="fa-solid fa-star"></i>7.5</span>
+                    <div class="poster-overlay">
+                        <a href="movie-details.html" class="play-btn"><i class="fa-solid fa-play"></i></a>
+                    </div>
+                </div>
+
+                <div class="movie-info">
+                    <h3>The Conjuring</h3>
+                    <div class="movie-meta"><span>2013</span><span>Horror</span></div>
+                    <p>
+                        Paranormal investigators help a family
+                        terrorized by a supernatural presence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="Oppenheimer" data-genre="Drama">
+                <div class="movie-poster">
+                    <img src="images/oppenheimer.jpeg" alt="Oppenheimer">
+                    <span class="movie-rating"><i class="fa-solid fa-star"></i>8.6</span>
+                    <div class="poster-overlay"><a href="movie-details.html" class="play-btn"><i class="fa-solid fa-play"></i></a></div>
+                </div>
+                <div class="movie-info">
+                    <h3>Oppenheimer</h3>
+                    <div class="movie-meta"><span>2023</span><span>Drama</span></div>
+                    <p>
+                        The story of the scientist who led the
+                        development of the first atomic bomb.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="Interstellar" data-genre="Sci-Fi">
+                <div class="movie-poster">
+                    <img src="images/interstellar.jpeg" alt="Interstellar">
+                    <span class="movie-rating"><i class="fa-solid fa-star"></i>8.7</span>
+                    <div class="poster-overlay">
+                        <a href="movie-details.html" class="play-btn"><i class="fa-solid fa-play"></i></a>
+                    </div>
+                </div>
+                <div class="movie-info">
+                    <h3>Interstellar</h3>
+                    <div class="movie-meta"><span>2014</span><span>Sci-Fi</span></div>
+                    <p>
+                        Explorers travel through a wormhole
+                        in search of a new home for humanity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="movie-card" data-title="The Hangover" data-genre="Comedy">
+                <div class="movie-poster">
+                    <img src="images/hangover.jpeg" alt="The Hangover">
+                    <span class="movie-rating"><i class="fa-solid fa-star"></i>7.7</span>
+                    <div class="poster-overlay">
+                        <a href="movie-details.html" class="play-btn"><i class="fa-solid fa-play"></i></a>
+                    </div>
+                </div>
+
+                <div class="movie-info">
+                    <h3>The Hangover</h3>
+                    <div class="movie-meta"><span>2009</span><span>Comedy</span></div>
+                    <p>
+                        Three friends wake up after a wild night
+                        in Las Vegas with no memory of what happened.
+                    </p>
+                </div>
+            </div>
+            <div class="movie-card" data-title="Titanic" data-genre="Romance">
+                <div class="movie-poster">
+                    <img src="images/titanic.jpeg" alt="Titanic">
+                    <span class="movie-rating"><i class="fa-solid fa-star"></i>7.9</span>
+                    <div class="poster-overlay"><a href="movie-details.html" class="play-btn"> <i class="fa-solid fa-play"></i></a></div>
+                </div>
+
+                <div class="movie-info">
+                    <h3>Titanic</h3>
+                    <div class="movie-meta"><span>1997</span><span>Romance</span></div>
+                    <p>
+                        A young couple from different social classes
+                        fall in love aboard the Titanic.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-results" id="noResults">
+            <i class="fa-solid fa-film"></i>
+            <h3>No Movies Found</h3>
+            <p>
+                Try searching for another movie or choose
+                a different genre.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo"><i class="fa-solid fa-film"></i>CineVerse</div>
+                <p>
+                    Discover the latest movies, trending films,
+                    and unforgettable stories all in one place.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="index.html#trending">Trending</a>
+                <a href="index.html#genres">Genres</a>
+                <a href="movies.html">Movies</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Genres</h3>
+                <a href="#" data-filter-link="Action">Action</a>
+                <a href="#" data-filter-link="Comedy">Comedy</a>
+                <a href="#" data-filter-link="Horror">Horror</a>
+                <a href="#" data-filter-link="Sci-Fi">Sci-Fi</a>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 CineVerse. All Rights Reserved.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
